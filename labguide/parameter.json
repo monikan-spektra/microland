@@ -2,15 +2,19 @@
   "Parameters": [
     {
       "ParameterKey": "CloudLabsDeploymentID",
-      "ParameterValue": "lab01-001"
+      "ParameterValue": "GET-DEPLOYMENT-ID"
     },
     {
       "ParameterKey": "AdminUsername",
-      "ParameterValue": "labuser"
+      "ParameterValue": "Labuser"
     },
     {
       "ParameterKey": "AdminPassword",
-      "ParameterValue": "Password!234"
+      "ParameterValue": "GEN-PASSWORD"
+    },
+    {
+      "ParameterKey": "CheckAcknowledgement",
+      "ParameterValue": "TRUE"
     }
   ]
 }
