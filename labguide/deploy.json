@@ -1,4 +1,3 @@
-
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "CloudLabs Environment - EC2 (Password Login) + S3 Bucket",
@@ -14,6 +13,11 @@
     "AdminPassword": {
       "Type": "String",
       "NoEcho": true
+    },
+    "CheckAcknowledgement": {
+      "Type": "String",
+      "Default": "TRUE",
+      "AllowedValues": ["TRUE", "FALSE"]
     }
   },
 
@@ -25,12 +29,10 @@
         "CidrBlock": "10.0.0.0/16",
         "EnableDnsSupport": true,
         "EnableDnsHostnames": true,
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "vpc-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "vpc-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
@@ -41,24 +43,20 @@
         "CidrBlock": "10.0.1.0/24",
         "MapPublicIpOnLaunch": true,
         "AvailabilityZone": { "Fn::Sub": "${AWS::Region}a" },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "subnet-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "subnet-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
     "InternetGateway": {
       "Type": "AWS::EC2::InternetGateway",
       "Properties": {
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "igw-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "igw-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
@@ -74,12 +72,10 @@
       "Type": "AWS::EC2::RouteTable",
       "Properties": {
         "VpcId": { "Ref": "VPC" },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "rtb-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "rtb-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
@@ -106,20 +102,16 @@
       "Properties": {
         "VpcId": { "Ref": "VPC" },
         "GroupDescription": "Allow SSH Password Login",
-        "SecurityGroupIngress": [
-          {
-            "IpProtocol": "tcp",
-            "FromPort": 22,
-            "ToPort": 22,
-            "CidrIp": "0.0.0.0/0"
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "sg-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "SecurityGroupIngress": [{
+          "IpProtocol": "tcp",
+          "FromPort": 22,
+          "ToPort": 22,
+          "CidrIp": "0.0.0.0/0"
+        }],
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "sg-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
@@ -131,15 +123,11 @@
           "Fn::Sub": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64}}"
         },
         "SubnetId": { "Ref": "Subnet" },
-        "SecurityGroupIds": [
-          { "Ref": "SecurityGroup" }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "lab-vm-${CloudLabsDeploymentID}" }
-          }
-        ]
+        "SecurityGroupIds": [{ "Ref": "SecurityGroup" }],
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "lab-vm-${CloudLabsDeploymentID}" }
+        }]
       }
     },
 
@@ -149,12 +137,36 @@
         "BucketName": {
           "Fn::Sub": "lab-bucket-${CloudLabsDeploymentID}"
         },
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": { "Fn::Sub": "lab-bucket-${CloudLabsDeploymentID}" }
+        "Tags": [{
+          "Key": "Name",
+          "Value": { "Fn::Sub": "lab-bucket-${CloudLabsDeploymentID}" }
+        }]
+      }
+    },
+
+    "TaskExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [{
+            "Effect": "Allow",
+            "Principal": {
+              "Service": ["ecs-tasks.amazonaws.com"]
+            },
+            "Action": ["sts:AssumeRole"]
+          }]
+        },
+        "Path": "/",
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+        ],
+        "Tags": [{
+          "Key": "Name",
+          "Value": {
+            "Fn::Sub": "TaskExecutionRole-${CloudLabsDeploymentID}"
           }
-        ]
+        }]
       }
     }
 
@@ -162,72 +174,54 @@
 
   "Outputs": {
     "CloudLabsDeploymentID": {
-      "Description": "CloudLabs Deployment ID",
       "Value": { "Ref": "CloudLabsDeploymentID" }
     },
     "AWSAccountID": {
-      "Description": "AWS Account ID",
       "Value": { "Ref": "AWS::AccountId" }
     },
     "Region": {
-      "Description": "AWS Region",
       "Value": { "Ref": "AWS::Region" }
     },
     "VpcId": {
-      "Description": "The ID of the VPC",
       "Value": { "Ref": "VPC" }
     },
     "SubnetId": {
-      "Description": "The ID of the Subnet",
       "Value": { "Ref": "Subnet" }
     },
     "SecurityGroupId": {
-      "Description": "Security Group ID",
       "Value": { "Ref": "SecurityGroup" }
     },
     "InstanceId": {
-      "Description": "EC2 Instance ID",
       "Value": { "Ref": "EC2Instance" }
     },
     "VMName": {
-      "Description": "Name of the VM",
       "Value": "lab-vm"
     },
     "EC2PublicIP": {
-      "Description": "VM Public IP",
-      "Value": {
-        "Fn::GetAtt": ["EC2Instance", "PublicIp"]
-      }
+      "Value": { "Fn::GetAtt": ["EC2Instance", "PublicIp"] }
     },
     "EC2PrivateIP": {
-      "Description": "VM Private IP",
-      "Value": {
-        "Fn::GetAtt": ["EC2Instance", "PrivateIp"]
-      }
+      "Value": { "Fn::GetAtt": ["EC2Instance", "PrivateIp"] }
     },
     "EC2PublicDNS": {
-      "Description": "Public DNS Name",
-      "Value": {
-        "Fn::GetAtt": ["EC2Instance", "PublicDnsName"]
-      }
+      "Value": { "Fn::GetAtt": ["EC2Instance", "PublicDnsName"] }
     },
     "EC2PrivateDNS": {
-      "Description": "Private DNS Name",
-      "Value": {
-        "Fn::GetAtt": ["EC2Instance", "PrivateDnsName"]
-      }
+      "Value": { "Fn::GetAtt": ["EC2Instance", "PrivateDnsName"] }
     },
     "S3BucketName": {
-      "Description": "S3 Bucket Name",
       "Value": { "Ref": "LabS3Bucket" }
     },
     "Username": {
-      "Description": "Login Username",
       "Value": { "Ref": "AdminUsername" }
     },
     "Password": {
-      "Description": "Login Password",
       "Value": { "Ref": "AdminPassword" }
+    },
+    "TaskExecutionRole": {
+      "Value": {
+        "Fn::GetAtt": ["TaskExecutionRole", "Arn"]
+      }
     }
   }
 }
