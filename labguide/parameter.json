@@ -1,0 +1,16 @@
+{
+  "Parameters": [
+    {
+      "ParameterKey": "CloudLabsDeploymentID",
+      "ParameterValue": "lab01-001"
+    },
+    {
+      "ParameterKey": "AdminUsername",
+      "ParameterValue": "labuser"
+    },
+    {
+      "ParameterKey": "AdminPassword",
+      "ParameterValue": "Password!234"
+    }
+  ]
+}
