@@ -1,3 +1,4 @@
+
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "CloudLabs Environment - EC2 (Password Login) + S3 Bucket",
@@ -12,7 +13,6 @@
     },
     "AdminPassword": {
       "Type": "String",
-      "Default": "Password!234",
       "NoEcho": true
     }
   },
@@ -40,6 +40,7 @@
         "VpcId": { "Ref": "VPC" },
         "CidrBlock": "10.0.1.0/24",
         "MapPublicIpOnLaunch": true,
+        "AvailabilityZone": { "Fn::Sub": "${AWS::Region}a" },
         "Tags": [
           {
             "Key": "Name",
@@ -126,16 +127,13 @@
       "Type": "AWS::EC2::Instance",
       "Properties": {
         "InstanceType": "t3.micro",
-        "ImageId": "ami-0c02fb55956c7d316",
+        "ImageId": {
+          "Fn::Sub": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64}}"
+        },
         "SubnetId": { "Ref": "Subnet" },
         "SecurityGroupIds": [
           { "Ref": "SecurityGroup" }
         ],
-        "UserData": {
-          "Fn::Base64": {
-            "Fn::Sub": "#!/bin/bash\nsudo useradd ${AdminUsername}\necho \"${AdminUsername}:${AdminPassword}\" | sudo chpasswd\nsudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config\nsudo service sshd restart || sudo service ssh restart"
-          }
-        },
         "Tags": [
           {
             "Key": "Name",
@@ -163,9 +161,61 @@
   },
 
   "Outputs": {
+    "CloudLabsDeploymentID": {
+      "Description": "CloudLabs Deployment ID",
+      "Value": { "Ref": "CloudLabsDeploymentID" }
+    },
+    "AWSAccountID": {
+      "Description": "AWS Account ID",
+      "Value": { "Ref": "AWS::AccountId" }
+    },
+    "Region": {
+      "Description": "AWS Region",
+      "Value": { "Ref": "AWS::Region" }
+    },
+    "VpcId": {
+      "Description": "The ID of the VPC",
+      "Value": { "Ref": "VPC" }
+    },
+    "SubnetId": {
+      "Description": "The ID of the Subnet",
+      "Value": { "Ref": "Subnet" }
+    },
+    "SecurityGroupId": {
+      "Description": "Security Group ID",
+      "Value": { "Ref": "SecurityGroup" }
+    },
+    "InstanceId": {
+      "Description": "EC2 Instance ID",
+      "Value": { "Ref": "EC2Instance" }
+    },
+    "VMName": {
+      "Description": "Name of the VM",
+      "Value": "lab-vm"
+    },
     "EC2PublicIP": {
-      "Description": "EC2 Public IP",
-      "Value": { "Fn::GetAtt": ["EC2Instance", "PublicIp"] }
+      "Description": "VM Public IP",
+      "Value": {
+        "Fn::GetAtt": ["EC2Instance", "PublicIp"]
+      }
+    },
+    "EC2PrivateIP": {
+      "Description": "VM Private IP",
+      "Value": {
+        "Fn::GetAtt": ["EC2Instance", "PrivateIp"]
+      }
+    },
+    "EC2PublicDNS": {
+      "Description": "Public DNS Name",
+      "Value": {
+        "Fn::GetAtt": ["EC2Instance", "PublicDnsName"]
+      }
+    },
+    "EC2PrivateDNS": {
+      "Description": "Private DNS Name",
+      "Value": {
+        "Fn::GetAtt": ["EC2Instance", "PrivateDnsName"]
+      }
     },
     "S3BucketName": {
       "Description": "S3 Bucket Name",
@@ -174,6 +224,10 @@
     "Username": {
       "Description": "Login Username",
       "Value": { "Ref": "AdminUsername" }
+    },
+    "Password": {
+      "Description": "Login Password",
+      "Value": { "Ref": "AdminPassword" }
     }
   }
 }
