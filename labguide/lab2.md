@@ -35,7 +35,7 @@ You are expected to follow AWS IAM best practices and use the specified resource
 > - **AmazonS3ReadOnlyAccess** policy is attached
 
 
-<validation step="UUID" />
+<validation step="e2aa55a5-9126-4e42-b58a-c7bdba7e716c" />
 
 ---
 
@@ -51,6 +51,6 @@ You are expected to follow AWS IAM best practices and use the specified resource
 > - IAM role **lam-lab-role** is attached to **lab-vm-<inject key="DeploymentID"/>**
 > - The instance profile is visible under the instance's **Security** tab
 
-<validation step="UUID" />
+<validation step="51d9cd69-c1c6-48a3-a907-551f6146be09" />
 
-## You have successfully completed the assessment
+## You have successfully completed the scenario-2
