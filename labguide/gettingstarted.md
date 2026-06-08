@@ -14,12 +14,15 @@ Follow the steps below to get started with the lab.
 
     * **Password**: **<inject key="Password" enableCopy="true" />**
 
-    ![](./images/login.png)
+    <img width="928" height="516" alt="gs2" src="https://github.com/user-attachments/assets/23a82220-7458-4478-b85c-13777c84966d" />
+
 
     Alternatively, you can also find these values on the **CloudLabs** Environment tab.
 
-    ![](./images/signin.png)
+<img width="391" height="450" alt="aws-env" src="https://github.com/user-attachments/assets/42e11b6f-4c49-493a-b877-de61f8780beb" />
+
+    
 
 2. After signing in to the AWS Management Console, choose the region **US-EAST-1 (N. Virginia)** from the drop-down menu in the top right hand corner.
 
-    ![](./images/region.png)
+   <img width="375" height="200" alt="regions-aws" src="https://github.com/user-attachments/assets/e7cbcd4c-2d5d-4c6d-95e9-4471f625c635" />
