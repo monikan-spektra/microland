@@ -103,7 +103,7 @@ def get_error():
 > - Browser returns the welcome page on `/` and `/index.html`
 > - Browser returns a 404 page on an unknown path
 
-<validation step="UUID" />
+<validation step="29e38797-ef36-4be6-8a35-731e1f3d07f9" />
 
 
 
