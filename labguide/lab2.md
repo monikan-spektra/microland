@@ -26,9 +26,6 @@ You are expected to follow AWS IAM best practices and use the specified resource
    |---|---|
    | `AmazonS3ReadOnlyAccess` | Grants EC2 read access to S3 |
 
-
-> **Hint:** The trusted entity defines which service can assume this role. Make sure you select **EC2**, not Lambda or another service.
-
 **Success Criteria:**
 > - IAM role **lam-lab-role** is created
 > - Trusted entity is set to **EC2**
