@@ -27,7 +27,7 @@ This scenario evaluates your ability to configure an S3 event trigger on the **S
 > - Trigger source is **lab-bucket-<inject key="DeploymentID"/>**
 > - Event type is set to **PUT**
 
-<validation step="UUID" />
+<validation step="c11be872-47a4-48a1-8004-3597d1f8b61c" />
 
 
 ### Task 2: Validate the S3 Trigger via CloudWatch Logs
@@ -45,7 +45,7 @@ This scenario evaluates your ability to configure an S3 event trigger on the **S
 > - CloudWatch log group **/aws/lambda/ServerlessWebApp** exists
 > - A new log stream is created after the upload
 
-<validation step="UUID" />
+<validation step="ee6836bb-0fdd-48cc-aeb0-2893cda914e1" />
 
 
 ## You have successfully completed assessment
