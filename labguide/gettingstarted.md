@@ -16,8 +16,7 @@ Follow the steps below to get started with the lab.
 
     <img width="928" height="516" alt="gs2" src="https://github.com/user-attachments/assets/23a82220-7458-4478-b85c-13777c84966d" />
 
-
-    Alternatively, you can also find these values on the **CloudLabs** Environment tab.
+Alternatively, you can also find these values on the **CloudLabs** Environment tab.
 
 <img width="391" height="450" alt="aws-env" src="https://github.com/user-attachments/assets/42e11b6f-4c49-493a-b877-de61f8780beb" />
 
