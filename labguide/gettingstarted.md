@@ -1,4 +1,4 @@
-# Introduction to AWS DevOps.
+# Lab1-AWS Serverless and Access Control
 
 Before starting the hands-on lab, kindly note that the lab duration will be shown at the top right corner of your lab environment page once the lab is launched by clicking the **Launch Lab** button. The time will be ticking automatically, so it's important to keep an eye on it while performing your lab tasks.
 
