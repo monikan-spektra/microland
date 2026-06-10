@@ -1,4 +1,4 @@
-# Scenario-2 AWS IAM Role and Access Control
+# **Scenario-2 AWS IAM Role and Access Control**
 
 ## **Lab Overview**
 
