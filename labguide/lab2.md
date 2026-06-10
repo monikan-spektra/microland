@@ -111,4 +111,4 @@ You have successfully completed the assessment when:
 * The instance profile is visible under the instance's **Security** tab.
 * Both validation steps complete successfully.
 
-You have successfully completed Scenario 2.
+## **You have successfully completed Scenario 2.**
