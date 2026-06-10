@@ -6,7 +6,7 @@ In this lab, you will use AWS Lambda to build and deploy a serverless web applic
 
 Serverless web hosting is a modern deployment pattern used by development and operations teams to reduce infrastructure overhead, lower costs, and improve scalability for lightweight web applications.
 
-**## Scenario**
+** ## Scenario**
 
 You have recently joined a cloud operations team as an AWS Solutions Engineer.
 
