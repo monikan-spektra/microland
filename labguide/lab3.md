@@ -115,4 +115,4 @@ You have successfully completed the assessment when:
 * The log entry includes the bucket name and the uploaded file key.
 * The validation step completes successfully.
 
-You have successfully completed Scenario 3.
+## **You have successfully completed Scenario 3.**
