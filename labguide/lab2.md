@@ -1,12 +1,12 @@
 # Scenario-2 AWS IAM Role and Access Control
 
-## Lab Overview
+## **Lab Overview**
 
 In this lab, you will use AWS Identity and Access Management (IAM) to create and assign a role that grants an EC2 instance secure, credential-free access to Amazon S3. You will create an IAM role with the appropriate trust policy, attach a managed S3 read-only policy, and associate the role with a pre-provisioned EC2 instance.
 
 Secure, role-based access to AWS services is a foundational best practice used by cloud operations teams to eliminate the use of long-term access keys and enforce least-privilege access control.
 
-## Scenario
+## **Scenario**
 
 You have recently joined a cloud operations team as an AWS Solutions Engineer.
 
@@ -14,13 +14,13 @@ The organization is modernizing its security posture by replacing static access 
 
 You have been provided access to an AWS environment and must create the IAM role with the correct trusted entity and permissions policy, then attach the role to the designated EC2 instance.
 
-## Solution
+## **Solution**
 
 To address this requirement, you will create an IAM role named **lam-lab-role** with EC2 as the trusted entity and the **AmazonS3ReadOnlyAccess** managed policy attached. You will then associate this role with the pre-provisioned EC2 instance **labvm** using an instance profile. This enables the instance to securely obtain temporary credentials via the instance metadata service.
 
 The solution demonstrates core IAM concepts including role creation, trust policy configuration, managed policy attachment, and instance profile association — without any static credentials.
 
-## Learning Objectives
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -30,7 +30,7 @@ After completing this lab, you will be able to:
 * Validate role attachment through the EC2 console Security tab.
 * Apply AWS IAM best practices for credential-free service access.
 
-## Environment Information
+## **Environment Information**
 
 This lab uses the AWS Management Console. No additional tools or SSH access are required.
 
@@ -40,29 +40,29 @@ All resources must be created in the AWS region provided in your lab environment
 
 ---
 
-## Assessment Objectives
+## **Assessment Objectives**
 
-### Scenario 2: Create IAM Role for EC2 to Access S3 Securely
+### **Scenario 2: Create IAM Role for EC2 to Access S3 Securely**
 
 This scenario evaluates your ability to create and assign an IAM role that grants an EC2 instance secure access to S3 — without using access keys.
 
 You are expected to follow AWS IAM best practices and use the specified resource names to ensure successful validation.
 
-### Task 1: Create the IAM Role
+### **Task 1: Create the IAM Role**
 
-### Assessment Objectives
+### **Assessment Objectives**
 1. Create an IAM role named **lam-lab-role**, configure it with EC2 as the trusted entity, attach the **AmazonS3ReadOnlyAccess** managed policy, and verify successful creation.
 
-### Task 2: Attach the IAM Role to the EC2 Instance
+### **Task 2: Attach the IAM Role to the EC2 Instance**
 
-### Assessment Objectives
+### **Assessment Objectives**
 1. Locate the pre-provisioned EC2 instance **labvm**, attach the IAM role **lam-lab-role**, and verify the instance profile is visible under the instance's Security tab.
 
 ---
 
-# Detailed Instructions
+# **Detailed Instructions**
 
-## Scenario 2: Create IAM Role for EC2 to Access S3 Securely
+## **Scenario 2: Create IAM Role for EC2 to Access S3 Securely**
 
 ### Task 1: Create the IAM Role
 
@@ -83,20 +83,13 @@ You are expected to follow AWS IAM best practices and use the specified resource
 
 <validation step="e2aa55a5-9126-4e42-b58a-c7bdba7e716c" />
 
-### Task 2: Attach the IAM Role to the EC2 Instance
+### **Task 2: Attach the IAM Role to the EC2 Instance**
 
 > **Note:** Your EC2 instance is pre-provisioned. Do not modify any other instance settings.
 
-**Success Criteria:**
-
-> - IAM role **lam-lab-role** is attached to **labvm**
-> - The instance profile is visible under the instance's **Security** tab
-
-<validation step="51d9cd69-c1c6-48a3-a907-551f6146be09" />
-
 ---
 
-## Evaluation Criteria
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
@@ -108,7 +101,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 
