@@ -44,7 +44,7 @@ Feel free to Start, Restart, or Stop your virtual machine as needed from the Res
 
 After completing the task, hit the Validate button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-  ![](../images/getting-started4.png)
+  ![](../images/getting-started5.png)
 
 ## **Note**
 
@@ -69,4 +69,4 @@ Learner Support Contacts:
 
 Now, click on Next >> from the lower right corner to move on to the next page.
 
-![](../images/getting-started5.png)
+![](../images/getting-started4.png)
