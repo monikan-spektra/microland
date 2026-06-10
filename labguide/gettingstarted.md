@@ -25,7 +25,13 @@ This lab equips you with essential AWS serverless and access management skills, 
 ## **Exploring Your Lab Resources**
 
 To get a better understanding of your lab resources and credentials, navigate to the Environment tab.
-  
+  * **Sign-in Link**: **<inject key="SignInUrl" enableCopy="true" />**
+ 
+  * **IAM Username**: **<inject key="UserName" enableCopy="true" />**
+ 
+  * **Password**: **<inject key="Password" enableCopy="true" />**
+
+ 
   ![](../images/getting-started1.png)
 
 ## **Utilizing the Split Window Feature**
