@@ -1,8 +1,8 @@
-# Lab1-AWS Serverless and Access Control
-### Duration: 90 Minutes
-## Getting Started with the Lab
+# **Lab1-AWS Serverless and Access Control**
+### **Duration: 90 Minutes**
+## **Getting Started with the Lab**
 
-## Overview
+## **Overview**
 
 This lab equips you with essential AWS serverless and access management skills, focusing on AWS Lambda deployment, Function URL configuration, IAM role creation, policy management, and secure service-to-service access. You will learn to build serverless applications, expose them through HTTP endpoints, and implement secure access to AWS resources using IAM roles.
 
@@ -13,7 +13,7 @@ This lab equips you with essential AWS serverless and access management skills, 
 > * Follow AWS security and serverless best practices when configuring resources.
 > * Do not modify resources other than those specified in the assessment instructions.
 
-## Access Information
+## **Access Information**
 
 * You will perform all lab tasks using the AWS Management Console provided in this lab environment.
 * The AWS account required for the assessment is preconfigured and accessible through your lab environment.
@@ -22,31 +22,31 @@ This lab equips you with essential AWS serverless and access management skills, 
   
   ![](../images/getting-started.png)
 
-## Exploring Your Lab Resources
+## **Exploring Your Lab Resources**
 
 To get a better understanding of your lab resources and credentials, navigate to the Environment tab.
   
   ![](../images/getting-started1.png)
 
-## Utilizing the Split Window Feature
+## **Utilizing the Split Window Feature**
 
 For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the Top right corner.
   
   ![](../images/getting-started2.png)
   
-## Managing Your Virtual Machine
+## **Managing Your Virtual Machine**
 
 Feel free to Start, Restart, or Stop your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
   ![](../images/getting-started3.png)
 
-## Lab Validation
+## **Lab Validation**
 
 After completing the task, hit the Validate button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
   ![](../images/image (3).png)
 
-## Note
+## **Note**
 
 All tasks in this lab are performed through the AWS Management Console provided in the lab environment.
 
@@ -58,7 +58,7 @@ All tasks in this lab are performed through the AWS Management Console provided 
 
 > **Note:** It is recommended to review resource settings carefully before saving changes, as validation checks both the existence and configuration of AWS resources.
 
-## Support Contact
+## **Support Contact**
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
