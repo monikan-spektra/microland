@@ -1,4 +1,4 @@
-# Scenario-3 AWS Lambda S3 Trigger and Event-Driven Architecture
+# **Scenario-3 AWS Lambda S3 Trigger and Event-Driven Architecture**
 
 ## **Lab Overview**
 
