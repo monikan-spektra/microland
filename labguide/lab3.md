@@ -21,15 +21,6 @@ This scenario evaluates your ability to configure an S3 event trigger on the **S
 5. Set the **Event type** to **PUT** (triggered on object uploads).
 6. Acknowledge the recursive invocation warning and click **Add**.
 
-
- **Success Criteria:**
-> - S3 trigger is added to **ServerlessWebApp**
-> - Trigger source is **lab-bucket-<inject key="DeploymentID"/>**
-> - Event type is set to **PUT**
-
-<validation step="c11be872-47a4-48a1-8004-3597d1f8b61c" />
-
-
 ### Task 2: Validate the S3 Trigger via CloudWatch Logs
 
 > **Note:** Do not modify the existing function code — the trigger will log events automatically.
