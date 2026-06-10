@@ -26,19 +26,19 @@ This lab equips you with essential AWS serverless and access management skills, 
 
 To get a better understanding of your lab resources and credentials, navigate to the Environment tab.
   
-  ![](./Media/GettingStarted-2.png)
+  ![](../images/getting-started1.png)
 
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the Top right corner.
   
-  ![](../Media/GettingStarted-3.png)
+  ![](../images/getting-started2.png)
   
 ## Managing Your Virtual Machine
 
 Feel free to Start, Restart, or Stop your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
-  ![](./Media/GettingStarted-4.png)
+  ![](../images/getting-started3.png)
 
 ## Lab Validation
 
