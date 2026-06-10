@@ -40,7 +40,7 @@ All resources must be created in the AWS region provided in your lab environment
 
 ---
 
-***## Assessment Objectives**
+**## Assessment Objectives**
 
 **### Scenario 1: Create HTTP-triggered Serverless Function**
 
