@@ -20,7 +20,7 @@ This lab equips you with essential AWS serverless and access management skills, 
 * All resources must be created and configured in the AWS region assigned to your lab session.
 * Once you're ready to begin, access the AWS Management Console from your browser and follow the assessment objectives provided in the lab guide.
   
-  ![](../images/getting-started.png)
+![](../images/getting-started.png)
 
 ## **Exploring Your Lab Resources**
 
