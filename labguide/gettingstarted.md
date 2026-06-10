@@ -1,26 +1,72 @@
 # Lab1-AWS Serverless and Access Control
+### Duration: 90 Minutes
+## Getting Started with the Lab
 
-Before starting the hands-on lab, kindly note that the lab duration will be shown at the top right corner of your lab environment page once the lab is launched by clicking the **Launch Lab** button. The time will be ticking automatically, so it's important to keep an eye on it while performing your lab tasks.
+## Overview
 
-![](./img/gh-81.png)
+This lab equips you with essential AWS serverless and access management skills, focusing on AWS Lambda deployment, Function URL configuration, IAM role creation, policy management, and secure service-to-service access. You will learn to build serverless applications, expose them through HTTP endpoints, and implement secure access to AWS resources using IAM roles.
 
-Follow the steps below to get started with the lab.
+> **Important:**
+>
+> * All tasks must be completed using the **AWS Management Console**.
+> * Use the exact resource names specified in each task to ensure successful validation.
+> * Follow AWS security and serverless best practices when configuring resources.
+> * Do not modify resources other than those specified in the assessment instructions.
 
-1. Sign in to the AWS Management Console by copying the **Sign-in link, Username, and Password** provided below.
+## Access Information
 
-    * **Sign-in Link**: **<inject key="SignInUrl" enableCopy="true" />**
+* You will perform all lab tasks using the AWS Management Console provided in this lab environment.
+* The AWS account required for the assessment is preconfigured and accessible through your lab environment.
+* All resources must be created and configured in the AWS region assigned to your lab session.
+* Once you're ready to begin, access the AWS Management Console from your browser and follow the assessment objectives provided in the lab guide.
+  
+  ![](./Media/GettingStarted-1.png)
 
-    * **IAM Username**: **<inject key="UserName" enableCopy="true" />**
+## Exploring Your Lab Resources
 
-    * **Password**: **<inject key="Password" enableCopy="true" />**
+To get a better understanding of your lab resources and credentials, navigate to the Environment tab.
+  
+  ![](./Media/GettingStarted-2.png)
 
-    <img width="928" height="516" alt="gs2" src="https://github.com/user-attachments/assets/23a82220-7458-4478-b85c-13777c84966d" />
+## Utilizing the Split Window Feature
 
-Alternatively, you can also find these values on the **CloudLabs** Environment tab.
+For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the Top right corner.
+  
+  ![](./Media/GettingStarted-3.png)
+  
+## Managing Your Virtual Machine
 
-  <img width="391" height="450" alt="aws-env" src="https://github.com/user-attachments/assets/42e11b6f-4c49-493a-b877-de61f8780beb" />
+Feel free to Start, Restart, or Stop your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
-   
-2. After signing in to the AWS Management Console, choose the region **US-EAST-1 (N. Virginia)** from the drop-down menu in the top right hand corner.
+  ![](./Media/GettingStarted-4.png)
 
-   <img width="375" height="200" alt="regions-aws" src="https://github.com/user-attachments/assets/e7cbcd4c-2d5d-4c6d-95e9-4471f625c635" />
+## Lab Validation
+
+After completing the task, hit the Validate button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+
+  ![](./Media/GettingStarted-5.png)
+
+## Note
+
+All tasks in this lab are performed through the AWS Management Console provided in the lab environment.
+
+* No SSH access or command-line connectivity is required.
+* No local software installation is necessary.
+* Use the AWS Management Console to create, configure, and validate all required resources.
+
+> **Important:** Use the exact resource names specified in the assessment instructions. Validation is based on these names and configurations.
+
+> **Note:** It is recommended to review resource settings carefully before saving changes, as validation checks both the existence and configuration of AWS resources.
+
+## Support Contact
+
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+
+Learner Support Contacts:
+
+* Email Support: labs-support@spektrasystems.com
+* Live Chat Support: https://cloudlabs.ai/labs-support
+
+Now, click on Next >> from the lower right corner to move on to the next page.
+
+![](./Media/GettingStarted-6.png)
