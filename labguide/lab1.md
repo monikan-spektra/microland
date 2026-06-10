@@ -1,4 +1,4 @@
-# Scenario-1 AWS Serverless and Access Control
+# **Scenario-1 AWS Serverless and Access Control**
 
 ## **Lab Overview**
 
