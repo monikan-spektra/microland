@@ -1,12 +1,12 @@
 # Scenario-3 AWS Lambda S3 Trigger and Event-Driven Architecture
 
-## Lab Overview
+## **Lab Overview**
 
 In this lab, you will configure an Amazon S3 event trigger on an existing AWS Lambda function so it automatically processes and logs a notification to CloudWatch Logs on every file upload. You will add the S3 trigger through the Lambda console, upload a test file, and validate the log output in CloudWatch.
 
 Event-driven serverless architectures are a modern design pattern used by cloud teams to automatically respond to storage events — such as file uploads — without polling or manual intervention, reducing latency and operational overhead.
 
-## Scenario
+## **Scenario**
 
 You have recently joined a cloud operations team as an AWS Solutions Engineer.
 
@@ -14,13 +14,13 @@ The organization is extending its serverless infrastructure by wiring storage ev
 
 You have been provided access to an AWS environment with a pre-provisioned S3 bucket and must configure the trigger, upload a test file, and verify the log output in CloudWatch.
 
-## Solution
+## **Solution**
 
 To address this requirement, you will open the existing **ServerlessWebApp** Lambda function from Scenario 1, add an S3 PUT event trigger pointing to the pre-provisioned bucket, and then upload a file to confirm end-to-end invocation. You will validate the result by inspecting the CloudWatch log group for a new log stream containing the bucket name and uploaded file key.
 
 The solution demonstrates core event-driven serverless concepts including S3 event source configuration, automatic Lambda invocation on object upload, and CloudWatch Logs validation — without any code changes.
 
-## Learning Objectives
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -30,7 +30,7 @@ After completing this lab, you will be able to:
 * Navigate CloudWatch Log groups and log streams to validate function execution.
 * Apply AWS event-driven best practices for serverless architectures.
 
-## Environment Information
+## **Environment Information**
 
 This lab uses the AWS Management Console. No additional tools or SSH access are required.
 
@@ -40,29 +40,29 @@ All resources must be created in the AWS region provided in your lab environment
 
 ---
 
-## Assessment Objectives
+## **Assessment Objectives**
 
-### Scenario 3: Create Lambda Function Triggered by S3 Upload
+### **Scenario 3: Create Lambda Function Triggered by S3 Upload**
 
 This scenario evaluates your ability to configure an S3 event trigger on the **ServerlessWebApp** Lambda function created in Scenario 1 and validate it logs notifications to CloudWatch Logs.
 
-### Task 1: Add the S3 Trigger to the Existing Lambda Function
+### **Task 1: Add the S3 Trigger to the Existing Lambda Function**
 
-### Assessment Objectives
+### **Assessment Objectives**
 1. Open the **ServerlessWebApp** Lambda function, add an S3 PUT trigger on the pre-provisioned bucket **lab-bucket**, and verify the trigger is active.
 
-### Task 2: Validate the S3 Trigger via CloudWatch Logs
+### **Task 2: Validate the S3 Trigger via CloudWatch Logs**
 
-### Assessment Objectives
+### **Assessment Objectives**
 1. Upload a file to **lab-bucket**, then confirm a new log stream is created in the **/aws/lambda/ServerlessWebApp** CloudWatch log group containing the bucket name and uploaded file key.
 
 ---
 
-# Detailed Instructions
+# **Detailed Instructions**
 
-## Scenario 3: Create Lambda Function Triggered by S3 Upload
+## **Scenario 3: Create Lambda Function Triggered by S3 Upload**
 
-### Task 1: Add the S3 Trigger to the Existing Lambda Function
+### **Task 1: Add the S3 Trigger to the Existing Lambda Function**
 
 > **Note:** Your S3 bucket is pre-provisioned. Do not create a new Lambda function — use the **ServerlessWebApp** function from Scenario 1.
 
@@ -73,13 +73,7 @@ This scenario evaluates your ability to configure an S3 event trigger on the **S
 | Bucket | `lab-bucket` |
 | Event type | `PUT` |
 
-**Success Criteria:**
-
-> - S3 trigger is added to the **ServerlessWebApp** function
-> - Trigger source is set to bucket **lab-bucket**
-> - Event type is configured as **PUT**
-
-### Task 2: Validate the S3 Trigger via CloudWatch Logs
+### **Task 2: Validate the S3 Trigger via CloudWatch Logs**
 
 > **Note:** Do not modify the existing function code — the trigger will log events automatically.
 
@@ -98,7 +92,7 @@ This scenario evaluates your ability to configure an S3 event trigger on the **S
 
 ---
 
-## Evaluation Criteria
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
@@ -110,7 +104,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 
