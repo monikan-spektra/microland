@@ -32,19 +32,19 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the Top right corner.
   
-  ![](./images/getting-started2.png)
+  ![](../images/getting-started2.png)
   
 ## **Managing Your Virtual Machine**
 
 Feel free to Start, Restart, or Stop your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
-  ![](./images/getting-started3.png)
+  ![](../images/getting-started3.png)
 
 ## **Lab Validation**
 
 After completing the task, hit the Validate button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-  ![](./images/getting-started4.png)
+  ![](../images/getting-started4.png)
 
 ## **Note**
 
@@ -69,4 +69,4 @@ Learner Support Contacts:
 
 Now, click on Next >> from the lower right corner to move on to the next page.
 
-![](./images/getting-started5.png)
+![](../images/getting-started5.png)
