@@ -1,12 +1,12 @@
 # Scenario-1 AWS Serverless and Access Control
 
-**## Lab Overview**
+## **Lab Overview**
 
 In this lab, you will use AWS Lambda to build and deploy a serverless web application that serves HTML content directly through a Function URL — without using API Gateway. You will create and configure a Lambda function, deploy Python-based web handler code, and validate HTTP routing behaviour across multiple URL paths.
 
 Serverless web hosting is a modern deployment pattern used by development and operations teams to reduce infrastructure overhead, lower costs, and improve scalability for lightweight web applications.
 
-** ## Scenario**
+ ## **Scenario**
 
 You have recently joined a cloud operations team as an AWS Solutions Engineer.
 
@@ -14,13 +14,13 @@ The organization is modernizing its web application infrastructure by migrating 
 
 You have been provided access to an AWS environment and must create a Lambda function that serves HTML content based on the incoming request path, configure a public Function URL, and validate the HTTP responses in a browser.
 
-**## Solution**
+## **Solution**
 
 To address this requirement, you will create a Lambda function using the Python 3.12 runtime, deploy a custom web handler that returns HTML responses based on URL path routing, and expose the function through a public Function URL with no authentication. You will then test the application using a browser to verify correct HTTP status codes and page content.
 
 The solution demonstrates core serverless concepts including function creation, code deployment, Function URL configuration, and HTTP path-based routing — without any additional networking infrastructure.
 
-**## Learning Objectives**
+## **Learning Objectives**
 
 After completing this lab, you will be able to:
 
@@ -30,7 +30,7 @@ After completing this lab, you will be able to:
 * Implement URL path routing logic inside a Lambda handler.
 * Validate HTTP responses using a browser and developer tools.
 
-**## Environment Information**
+## **Environment Information**
 
 This lab uses the AWS Management Console. No additional tools or SSH access are required.
 
@@ -40,29 +40,29 @@ All resources must be created in the AWS region provided in your lab environment
 
 ---
 
-**## Assessment Objectives**
+## **Assessment Objectives**
 
-**### Scenario 1: Create HTTP-triggered Serverless Function**
+### **Scenario 1: Create HTTP-triggered Serverless Function**
 
 Build and deploy a Lambda function that serves an HTML web application over HTTP using a Function URL.
 
-**### Task 1: Create and Deploy the Lambda Function**
+### **Task 1: Create and Deploy the Lambda Function**
 
-**### Assessment Objectives**
+### **Assessment Objectives**
 1. Create a Lambda function named **ServerlessWebApp**, configure it with the Python 3.12 runtime, deploy a custom web handler, and verify successful deployment.
 
-**### Task 2: Configure Function URL and Test**
+### **Task 2: Configure Function URL and Test**
 
-**### Assessment Objectives**
+### **Assessment Objectives**
 1. Enable a public Function URL on the Lambda function, set the auth type to **NONE**, and validate the HTTP routing behaviour for multiple URL paths in a browser.
 
 ---
 
-**# Detailed Instructions**
+# **Detailed Instructions**
 
-**## Scenario 1: Create HTTP-triggered Serverless Function**
+## **Scenario 1: Create HTTP-triggered Serverless Function**
 
-**### Task 1: Create and Deploy the Lambda Function**
+### **Task 1: Create and Deploy the Lambda Function**
 
 > **Note:** Follow the specified naming conventions exactly to ensure validation works properly.
 
@@ -129,7 +129,7 @@ def get_error():
 
 <validation step="8e733187-46df-4139-b57f-5ddeb4948a8a" />
 
-**### Task 2: Configure Function URL and Test**
+### **Task 2: Configure Function URL and Test**
 
 > **Note:** Use Auth type **NONE** to allow public HTTP access to your function.
 
@@ -145,7 +145,7 @@ def get_error():
 
 ---
 
-**## Evaluation Criteria**
+## **Evaluation Criteria**
 
 Your submission will be evaluated based on:
 
@@ -157,7 +157,7 @@ Your submission will be evaluated based on:
 
 ---
 
-## Completion Criteria
+## **Completion Criteria**
 
 You have successfully completed the assessment when:
 
