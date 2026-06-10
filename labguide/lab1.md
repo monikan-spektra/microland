@@ -168,4 +168,4 @@ You have successfully completed the assessment when:
 * The browser returns a 404 page on any unknown path.
 * Both validation steps complete successfully.
 
-You have successfully completed Scenario 1.
+## **You have successfully completed Scenario 1.**
